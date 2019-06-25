@@ -28,5 +28,7 @@ namespace FichaAcademia.dominio.Models
         [Required(ErrorMessage = "Campo {0} obrigatório")]
         [Range(1, 150, ErrorMessage = "Frequência Inválida")]
         public int FrequenciaSemanal { get; set; }
+
+        public ICollection<Ficha> Fichas { get; set; }
     }
 }
