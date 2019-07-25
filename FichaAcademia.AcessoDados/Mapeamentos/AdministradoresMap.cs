@@ -23,7 +23,8 @@ namespace FichaAcademia.AcessoDados.Mapeamentos
 
             builder.Property(x => x.Senha)
                 .IsRequired();
-            
+
+            builder.ToTable("Administrador");
         }
     }
 }

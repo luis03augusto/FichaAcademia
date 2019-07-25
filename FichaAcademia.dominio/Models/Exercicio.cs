@@ -7,7 +7,7 @@ namespace FichaAcademia.dominio.Models
 {
     public class Exercicio
     {
-        public int ExercicioOd { get; set; }
+        public int ExercicioId { get; set; }
         [Required(ErrorMessage ="Campo {0} obrigatório")]
         [StringLength(50, ErrorMessage ="Use menos caracteres")]
         public string Nome { get; set; }
@@ -15,6 +15,6 @@ namespace FichaAcademia.dominio.Models
         public int CateforiaExercicoId { get; set; }
         public CategoriaExercicio CategoriaExercicio { get; set; }
 
-        public ICollection<ListaExercicio> ListaExercicios { get; set; }
+        public ICollection<ListaExercicios> ListaExercicios { get; set; }
     }
 }
