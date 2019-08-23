@@ -1,4 +1,5 @@
-﻿using FichaAcademia.dominio.Models;
+﻿using FichaAcademia.AcessoDados.Mapeamentos;
+using FichaAcademia.dominio.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,19 @@ namespace FichaAcademia.AcessoDados
         public Contexto(DbContextOptions<Contexto> options) : base(options)
         {
 
+        }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfiguration(new AdministradoresMap());
+            modelBuilder.ApplyConfiguration(new AlunoMap());
+            modelBuilder.ApplyConfiguration(new CategoriaExercicioMap());
+            modelBuilder.ApplyConfiguration(new ExercicioMap());
+            modelBuilder.ApplyConfiguration(new FichaMap());
+            modelBuilder.ApplyConfiguration(new ListaExercicioMap());
+            modelBuilder.ApplyConfiguration(new ObjetivoMap());
+            modelBuilder.ApplyConfiguration(new ProfessorMap());
+
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

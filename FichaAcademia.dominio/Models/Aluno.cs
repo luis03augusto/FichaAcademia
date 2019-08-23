@@ -30,5 +30,8 @@ namespace FichaAcademia.dominio.Models
         public int FrequenciaSemanal { get; set; }
 
         public ICollection<Ficha> Fichas { get; set; }
+
+        public int ObjetivoId { get; set; }
+        public Objetivo Objetivo { get; set; }
     }
 }
