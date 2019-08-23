@@ -15,6 +15,6 @@ namespace FichaAcademia.dominio.Models
         public int CateforiaExercicoId { get; set; }
         public CategoriaExercicio CategoriaExercicio { get; set; }
 
-        public ICollection<ListaExercicio> ListaExercicios { get; set; }
+        public ICollection<ListaExercicios> ListaExercicios { get; set; }
     }
 }
